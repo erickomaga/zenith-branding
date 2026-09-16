@@ -3,15 +3,15 @@
    ========================================================================== */
 :root {
     --bg-main: #ffffff;
-    --bg-alt: #f8fa2c1;
+    --bg-alt: #f8f9fa;
     --bg-alt-light: #f4f6f8;
     --text-primary: #0d0f12;       /* Preto corporativo */
     --text-secondary: #5a626a;     /* Cinza equilibrado */
-    --primary-blue: #0052ff;       /* Azul elétrico da marca Zenith */
+    --primary-blue: #0052ff;       /* Azul elétrico Zenith */
     --primary-blue-hover: #0041cd;
     --border-color: #e2e8f0;
     
-    /* Tipografia alinhada ao Banner ZENITH BRANDING */
+    /* Tipografia alinhada à marca ZENITH BRANDING */
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION (ESTILO CLEAN & PROPRIETÁRIO)
+   HERO SECTION
    ========================================================================== */
 .hero-section {
     padding: 160px 0 90px 0;
@@ -221,7 +221,7 @@ body {
     border-color: var(--text-primary);
 }
 
-/* CARD DE DESTAQUE NO HERO */
+/* CARD HERO VISUAL */
 .hero-visual {
     display: flex;
     justify-content: center;
@@ -260,7 +260,7 @@ body {
 }
 
 /* ==========================================================================
-   BRANDS BANNER (ESTILO SEÇÃO DE EMPRESAS WOZBER)
+   BRANDS BANNER
    ========================================================================== */
 .brands-banner {
     background: var(--text-primary);
@@ -485,7 +485,7 @@ body {
 }
 
 /* ==========================================================================
-   FAQ
+   FAQ ACCORDION
    ========================================================================== */
 .faq-section {
     padding: 90px 0;
@@ -632,13 +632,14 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE & MOBILE OPTIMIZATION
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-grid,
     .grid-2,
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .hero-text h1 {
@@ -655,6 +656,7 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Menu Hamburguer e Nav Mobile */
     .menu-toggle {
         display: block;
     }
@@ -666,9 +668,10 @@ body {
         width: 100%;
         background: #ffffff;
         flex-direction: column;
-        padding: 20px 0;
-        gap: 16px;
+        padding: 24px 20px;
+        gap: 20px;
         border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         display: none;
     }
 
@@ -676,16 +679,90 @@ body {
         display: flex;
     }
 
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-nav {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* Hero Ajustado */
+    .hero-section {
+        padding: 120px 0 60px 0;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        margin: 0 auto 24px auto;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    /* Grid de Elementos */
     .grid-3,
     .processo-grid {
         grid-template-columns: 1fr;
     }
 
+    /* Marcas / Tecnologias */
+    .brands-row {
+        gap: 16px;
+        font-size: 0.88rem;
+    }
+
+    /* Seção Contato */
     .contato-box {
         padding: 40px 20px;
     }
 
     .contato-box h2 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
+    }
+
+    .contato-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contato-btns .btn {
+        width: 100%;
+    }
+
+    /* Footer Mobile */
+    .footer-grid {
+        text-align: center;
+    }
+
+    .footer-col p {
+        margin: 12px auto 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .visual-card {
+        padding: 30px 20px;
     }
 }
