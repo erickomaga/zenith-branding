@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicializa Animações no Scroll (AOS)
+    // Inicialização do AOS
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
+            duration: 700,
+            easing: 'ease-out',
             once: true
         });
     }
 
-    // Menu Mobile Toggle
+    // Menu Mobile
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -26,15 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Accordion FAQ
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const isOpen = item.classList.contains('open');
-            faqItems.forEach(i => i.classList.remove('open'));
+    // FAQ Accordion
+    const faqBoxes = document.querySelectorAll('.faq-box');
+    faqBoxes.forEach(box => {
+        box.addEventListener('click', () => {
+            const isOpen = box.classList.contains('open');
+            faqBoxes.forEach(b => b.classList.remove('open'));
             if (!isOpen) {
-                item.classList.add('open');
+                box.classList.add('open');
             }
         });
     });
