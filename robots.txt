@@ -1,0 +1,22 @@
+# Permite que robôs tradicionais e IAs leiam todo o site
+User-agent: *
+Allow: /
+
+# Robôs específicos de Inteligência Artificial (OpenAI, Anthropic, Perplexity, Google Gemini)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Aponta para o mapa do seu site
+Sitemap: https://erickomaga.github.io/zenith-branding/
